@@ -1,5 +1,3 @@
-#![link_name = "m"]
-
 use libc::{c_double, c_int};
 
 extern "C" {

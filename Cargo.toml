@@ -18,8 +18,13 @@ readme = "README.md"
 categories = ["algorithms", "science"]
 keywords = ["beta", "error", "gamma"]
 
+[features]
+default = ["std"]
+std = ["libc"]
+
 [dependencies]
-libc = "0.2"
+libc = {version = "0.2", optional = true} 
+libm = "0.2.2" # Only used if default feature "std" is *not* activated.
 
 [dev-dependencies]
 assert = "0.7"
